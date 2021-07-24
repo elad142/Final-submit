@@ -1,35 +1,95 @@
-body {
-  background-color: black;
-  color:white;
+* {
+  box-sizing: border-box;
 }
-.cell {
-  width: 40px;
-  height: 40px;
+
+html, body {
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background-color: rgba(0, 0, 128, 0.445);
+}
+
+.game-border {
+  border: 1px solid rgb(168, 168, 148);
+  display: flexbox;
+  background-color: brown;
   text-align: center;
-  font-size: 1.5em;
+  max-width:900px;
+  max-height:900px;
+  height: fit-content;
+  width: fit-content;
+  padding: 3px;
+  margin-left: 40%;
+  margin-right: 60%;
+  margin-top: 10%;
+  margin-bottom: 90%;
+}
+
+.board-container {
+  border: 5px solid rgb(168, 168, 148);
+  display: flexbox;
+  height: max-content;
+  width: max-content;
+  background-color: brown;
+  padding: 5px;
+  text-align: center;
+}
+
+.cell {
+  text-align: center;
+  display: flexbox;
+  cursor: pointer;
+  font-size: 2.5vw;
 }
 
 .cell:hover {
   background-color: rgba(42, 41, 41, 0.712);
-
+  transition: 0.3s;
 }
 
-.board-container {
-  display: flex;
-  flex-wrap: wrap;
-  transform: scale(250%);
+.upper-menu {
+  border: 3px solid rgb(168, 168, 148);
+  display: flexbox;
   background-color: brown;
-  margin-left: 50%;
-  margin-top: 50%;
-  
+  text-align: center;
+  height: 100%;
+  width: 100%;
 }
-.table {
-  height:fit-content;
-  width: fit-content;
-  border: 3px yellow;
 
+.score {
+  border: 1px solid rgb(168, 168, 148);
+  display: inline-block;
+  background-color: yellow;
+  text-align: center;
+  height: 45%;
+  width: 45%;
 }
-/* .floor {
-  background-color: gray;
-} */
 
+.timer {
+  border: 1px solid rgb(168, 168, 148);
+  display: inline-block;
+  background-color: yellow;
+  text-align: center;
+  height: 45%;
+  width: 45%;
+}
+
+.smiley {
+  border: 1px solid rgb(168, 168, 148);
+  display: inline-block;
+  background-color: yellow;
+  text-align: center;
+  height: 10%;
+  width: 10%;
+}
+
+.navbar {
+  display: block;
+  background-color: salmon;
+  padding: 10px;
+  font-size: 50px;
+  text-align: center;
+  font-family: fantasy;
+}
