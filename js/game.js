@@ -1,6 +1,7 @@
 'use strict'
 var MINE = '💥';
 var FLOOR = '⬜';
+var FLOOR_2 = '♒️';
 var FLAG = '🚩';
 var gFirstMove;
 
@@ -160,7 +161,7 @@ function renderCell(elCell, i, j, RvL) {
             elCell.innerText = gBoard[i][j].mineNegCount;
         }
         if (numCount === 0) {
-            elCell.innerText = '';
+            elCell.innerText = FLOOR_2;
             // expandShown(elCell, i, j);
         }
         if (gBoard[i][j].isMine === true) {
